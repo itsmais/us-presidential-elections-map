@@ -13,7 +13,8 @@ function readFile (file){
     rawFile.send(null);
 }
 
-let pathToDataFile = "../data.txt"
+// let pathToDataFile = "../data.txt"
+let pathToDataFile = "https://github.com/itsmais/us-presidential-elections-map/blob/main/data.txt";
 readFile(pathToDataFile)
 
 let DOM_MAP = document.getElementById("interactive-map");
