@@ -677,18 +677,30 @@ WY 23 70 00 Jan 02 Jan 02 Election 2016
 // readFile(pathToDataFile)
 
 let DOM_MAP = document.getElementById("interactive-map");
-let US_States = ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", 
-"GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", 
-"MN", "MO", "MS", "MT", "NC", "ND", "NE",  "NH", "NJ", "NM", "NV", "NY", "OH", 
-"OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"]; 
+let US_States = [
+  "AK", "AL", "AR", "AZ", "CA", "CO", 
+  "CT", "DC", "DE", "FL", "GA", "HI", 
+  "IA", "ID", "IL", "IN", "KS", "KY", 
+  "LA", "MA", "MD", "ME", "MI", "MN", 
+  "MO", "MS", "MT", "NC", "ND", "NE", 
 
-let US_Sates_full = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware',
-'District of Columbia','Florida','Georgia', 'Hawaii', 'Idaho','Illinois',
-'Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan',
-'Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York',
-'North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania',
-'Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington',
-'West Virginia','Wisconsin','Wyoming'];
+  "NH", "NJ", "NM", "NV", "NY", "OH", 
+  "OK", "OR", "PA", "RI", "SC", "SD", 
+  "TN", "TX", "UT", "VA", "VT", "WA", 
+  "WI", "WV", "WY"
+]; 
+
+let US_Sates_full = [
+  'Alaska','Alabama','Arkansas','Arizona','California','Colorado',
+  'Connecticut','District of Columbia','Delaware','Florida','Georgia', 'Hawaii', 
+  'Iowa','Idaho','Illinois','Indiana','Kansas','Kentucky',
+  'Louisiana','Massachusetts','Maryland','Maine','Michigan','Minnesota',
+  'Missouri','Mississippi','Montana','North Carolina','North Dakota','Nebraska',
+  'New Hampshire','New Jersey','Nevada','New Mexico','New York','Ohio',
+  'Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota',
+  'Tennessee','Texas','Utah','Virginia','Vermont','Washington',
+  'Wisconsin','West Virginia','Wyoming'
+];
 
 let state_averages_dem = {}; // dictionary of STATE : AVERAGE for Democrats
 let state_averages_rep = {}; // dictionary of STATE : AVERAGE for Republicans
