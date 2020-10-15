@@ -753,7 +753,7 @@ let colors = [];
 let polling_outcomes = [];
 
 for (i in US_States){
-  polling_outcomes[i]="Dem=" + Math.floor(state_averages_dem[US_States[i]]) + "%, Rep=" + Math.floor(state_averages_rep[US_States[i]]) +"<br>" + US_Sates_full[i];
+  polling_outcomes[i]="Dem=" + Math.floor(state_averages_dem[US_States[i]]) + "%, Rep=" + Math.floor(state_averages_rep[US_States[i]]) +"%<br>" + US_Sates_full[i];
   if (state_averages_dem[US_States[i]]-state_averages_rep[US_States[i]] > 0){
     // blue
     colors[i] = Math.floor(mid - Math.abs(state_averages_dem[US_States[i]] - state_averages_rep[US_States[i]]));
@@ -766,7 +766,10 @@ for (i in US_States){
 var data = [{
   type: "choroplethmapbox", 
   locations: US_States, 
-  text: polling_outcomes,
+  // textinfo: "none",
+  // text: polling_outcomes,
+  hovertemplate:polling_outcomes,
+  name: "",
   z: colors, 
   zmin: min_diff, 
   zmax: max_diff,
