@@ -753,7 +753,7 @@ let colors = [];
 let polling_outcomes = [];
 
 for (i in US_States){
-  polling_outcomes[i]="Dem=" + Math.floor(state_averages_dem[US_States[i]]) + "%, Rep=" + Math.floor(state_averages_rep[US_States[i]]) +"%<br>" + US_Sates_full[i];
+  polling_outcomes[i]="Dem=" + Math.floor(state_averages_dem[US_States[i]]) + "%, GOP=" + Math.floor(state_averages_rep[US_States[i]]) +"%<br>" + US_Sates_full[i];
   if (state_averages_dem[US_States[i]]-state_averages_rep[US_States[i]] > 0){
     // blue
     colors[i] = Math.floor(mid - Math.abs(state_averages_dem[US_States[i]] - state_averages_rep[US_States[i]]));
@@ -775,7 +775,7 @@ var data = [{
   zmax: max_diff,
   colorbar: {
     autotic: true,
-    title: 'mid_point±|%rep-%dem|'},
+    title: 'mid_point±|%gop-%dem|'},    
   geojson: "https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/us-states.json"
 }];
 
