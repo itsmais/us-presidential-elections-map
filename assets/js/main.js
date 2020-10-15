@@ -748,7 +748,7 @@ for (i =1; i< US_States.length; i++){
 
 // console.log(min_diff);
 // console.log(max_diff);
-let med = (min_diff + max_diff) / 2;
+let mid = (min_diff + max_diff) / 2;
 let colors = [];
 let polling_outcomes = [];
 
@@ -756,10 +756,10 @@ for (i in US_States){
   polling_outcomes[i]="Dem=" + Math.floor(state_averages_dem[US_States[i]]) + "%, Rep=" + Math.floor(state_averages_rep[US_States[i]]) +"<br>" + US_Sates_full[i];
   if (state_averages_dem[US_States[i]]-state_averages_rep[US_States[i]] > 0){
     // blue
-    colors[i] = Math.floor(med - Math.abs(state_averages_dem[US_States[i]] - state_averages_rep[US_States[i]]));
+    colors[i] = Math.floor(mid - Math.abs(state_averages_dem[US_States[i]] - state_averages_rep[US_States[i]]));
   }
   else { // red
-    colors[i] = Math.floor(med + Math.abs(state_averages_dem[US_States[i]] - state_averages_rep[US_States[i]]));
+    colors[i] =   Math.floor(mid + Math.abs(state_averages_dem[US_States[i]] - state_averages_rep[US_States[i]]));
   }
 }
 
@@ -770,8 +770,12 @@ var data = [{
   z: colors, 
   zmin: min_diff, 
   zmax: max_diff,
+  colorbar: {
+    autotic: true,
+    title: 'mid_point±|%rep-%dem|'},
   geojson: "https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/us-states.json"
 }];
+
 let lat =  38;
 let long = -96;
 var layout = {mapbox: {center: {lon: long, lat: lat}, zoom: 2.8},
