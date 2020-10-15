@@ -1,34 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
 
-h1,h2{
+h1,h6,footer{
     font-family: 'Antic Slab', serif;
-    margin-top:10px;
-}
-table{
-    text-align: center;
-    font-family: 'Antic Slab', serif;
-}
-th{
-    font-weight: 500;
-    color: #FFF;
-    position: sticky;
-    top: 0;
-    background: #DC3545;
-  /* box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); */
-}
-h3{
-    margin-top: -10px;
-    margin-bottom: 20px;
-    font-weight: lighter;
-}
-h1, h3, h2, footer{
     text-align: center;
 }
-h2{
-    color: #FF0000;
-    background-color: #FFFF00;
+#main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 40vh;
 }
+
 footer{
     font-size: small;
-    font-family: 'Antic Slab', serif;
 }
