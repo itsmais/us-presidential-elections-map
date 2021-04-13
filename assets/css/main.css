@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap');
+
+#header {
+    padding: 50px 0 0 0;
+}
 
 h1,h6,footer{
     font-family: 'Antic Slab', serif;
@@ -15,4 +20,10 @@ h1,h6,footer{
 
 footer{
     font-size: small;
+}
+
+.signature { 
+    font-family: 'Dawning of a New Day', cursive;
+    color: #364F6B;
+    font-size: 12px;
 }
